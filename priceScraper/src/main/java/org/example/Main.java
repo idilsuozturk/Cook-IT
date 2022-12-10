@@ -25,42 +25,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        /*
-
-        // Define the search term
-        String searchQuery = "iphone 13";
-
-        // Instantiate the client
-        WebClient client = new WebClient();
-        client.getOptions().setCssEnabled(false);
-        client.getOptions().setJavaScriptEnabled(false);
-
-        // Set up the URL with the search term and send the request
-        String searchUrl = "https://www.migros.com.tr/patlican-kemer-kg-p-1afde98" + URLEncoder.encode(searchQuery, "UTF-8");
-        HtmlPage page = client.getPage(searchUrl);
-
-        // Retrieve all <li> elements
-        HtmlElement itemPriceHtml =  page.getFirstByXPath("//span[@class='amount']/text()");
-        String itemPrice = itemPriceHtml.asNormalizedText();
-
-        System.out.println(itemPrice);
-
-        */
-
-
-        /*
-        WebClient webClient = new WebClient();
-        webClient.getOptions().setCssEnabled(false);
-        webClient.getOptions().setJavaScriptEnabled(false);
-        HtmlPage page = webClient.getPage("https://www.migros.com.tr/patlican-kemer-kg-p-1afde98");
-
-
-        HtmlElement itemPriceHtml =  page.getFirstByXPath("/html/body/sm-root/div/main/sm-product/article/sm-product-detail-page/div[2]/fe-product-price/div/div/span/text()");
-
-
-        System.out.println(itemPriceHtml.asNormalizedText());
-
-        */
+        
 
         WebClient webClient = new WebClient();
         webClient.getOptions().setCssEnabled(false);
