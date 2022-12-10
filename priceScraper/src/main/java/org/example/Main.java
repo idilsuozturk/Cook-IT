@@ -68,13 +68,14 @@ public class Main {
 
 
 
-        HtmlPage page = getDocument("https://getir.com/kategori/meyve-sebze-VN2A9ap5Fm/");
+        HtmlPage page = getDocument("https://getir.com/en/category/fruits-veg-tBYm30SlS9/");
 
         ArrayList<HtmlElement> list = new ArrayList<HtmlElement>();
 
         List<?> anchors = page.getByXPath("//article[@class='sc-82bcadf4-0 iCZWKw']");
         for (int i = 0; i < anchors.size(); i++) {
             list.add((HtmlElement) anchors.get(i));
+            System.out.println();
 
         }
 
