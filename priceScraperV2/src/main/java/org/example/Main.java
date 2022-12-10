@@ -37,7 +37,7 @@ public class Main {
 
 
         HtmlPage page = getDocument(URL);
-        HtmlElement priceHtml = page.getFirstByXPath("//div[@class='sc-dd9e2587-7 bwPUUQ']/span");
+        HtmlElement priceHtml = page.getFirstByXPath("//div[@class='sc-dd9e2587-7 bwPUUQ']/span[last()]");
         String name = priceHtml.asNormalizedText();
         return name;
     }
