@@ -2,9 +2,12 @@ package org.example;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
 
+import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class Main {
@@ -78,8 +81,28 @@ public class Main {
         return price;
     }
 
+    /**
+     * @param fileNameWithUrl the file name,
+     * @param urls,names,prices,amounts the ArrayLists
+     * @return  filled ArrayLists
+     */
+    public static void fillArrays(String fileNameWithURL, ArrayList<String> urls, ArrayList<String> names, ArrayList<Integer> prices, ArrayList<Integer> amounts) throws FileNotFoundException{
 
+        fileNameWithURL += ".txt";
+        File file = new File(fileNameWithURL);
+        Scanner sc = new Scanner(file);
+        String url;
 
+        while (sc.hasNext()){
+            url = sc.nextLine();
+            url = url.trim();
+            urls.add(url);
+            names.add(getNameFromURL(url));
+            prices.add(getPriceFromURL(url));
+            amounts.add(getAmountFromURL(url));   
+        }
+    }
+}
     public static void main(String[] args) throws IOException {
 
        
