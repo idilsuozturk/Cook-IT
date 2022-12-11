@@ -102,7 +102,7 @@ public class Main {
             amounts.add(getAmountFromURL(url));   
         }
     }
-}
+
     public static void main(String[] args) throws IOException {
 
        
